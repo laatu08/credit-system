@@ -3,8 +3,10 @@ from core.views.eligibility import CheckEligibilityView
 from core.views.create_loan import CreateLoanView
 from core.views.view_loan import ViewLoanView
 from core.views.view_loans import ViewLoansByCustomerView
+from core.views.register import RegisterCustomerView
 
 urlpatterns = [
+    path("register/", RegisterCustomerView.as_view()),
     path("check-eligibility/", CheckEligibilityView.as_view()),
     path("create-loan/", CreateLoanView.as_view()),
     path("view-loan/<int:loan_id>/", ViewLoanView.as_view()),
