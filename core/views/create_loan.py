@@ -44,7 +44,6 @@ class CreateLoanView(APIView):
                 status=status.HTTP_200_OK
             )
 
-        # ✅ Loan approved — create record
         start_date = date.today()
         end_date = start_date + timedelta(days=30 * data["tenure"])
 

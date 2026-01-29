@@ -52,10 +52,11 @@ def check_loan_eligibility(customer, loan_amount, interest_rate, tenure):
         approved = False
     elif score <= 30:
         if interest_rate < 16:
-            corrected_rate = 16
             approved = False
+            corrected_rate = 16
     elif score <= 50:
         if interest_rate < 12:
+            approved = False
             corrected_rate = 12
 
     # EMI rule
